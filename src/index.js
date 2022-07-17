@@ -1,17 +1,20 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import First from "./First";
+import { Form } from './form';
+import "./index.css";
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
+///
+//<div id="main"></div>
+const root = ReactDOM.createRoot(document.getElementById('main'));
+//document.appendChild()
+//React.createElement("div|p|article", {},"")
+//create Element 
+const node = React.createElement("div", {}, React.createElement("ul", {},
+[React.createElement("li", {}, "First Element"),React.createElement("li", {}, "SecondElement")]
+));
+const node1 = React.createElement("div", {id: "parent", className: "test"}, [React.createElement("div", {style: {color: "red"}},"Hello"),
+React.createElement("ul", {}, [React.createElement("li", {}, "1 Element"), React.createElement("li", {}, "2 Element")])] )
 root.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>
+    <div>{node1}</div>
 );
-
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
