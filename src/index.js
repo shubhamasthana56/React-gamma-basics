@@ -3,6 +3,11 @@ import ReactDOM from 'react-dom/client';
 import First from "./First";
 import { Form } from './form';
 import "./index.css";
+import FirstClassComponent from './first-class-component';
+import FirstFunctionalComponent from './first-functional-component';
+import Assignment1 from './assigments/assignment-1';
+import Input from './input';
+import List from './list';
 
 ///
 //<div id="main"></div>
@@ -16,5 +21,14 @@ const node = React.createElement("div", {}, React.createElement("ul", {},
 const node1 = React.createElement("div", {id: "parent", className: "test"}, [React.createElement("div", {style: {color: "red"}},"Hello"),
 React.createElement("ul", {}, [React.createElement("li", {}, "1 Element"), React.createElement("li", {}, "2 Element")])] )
 root.render(
-    <div>{node1}</div>
+    <div>{node1}
+      {/* <FirstClassComponent/>
+      <br>
+      </br>
+      <div>Functional Component</div>
+      <FirstFunctionalComponent/> */}
+      {/* <Assignment1/> */}
+      <Input/>
+      <List/>
+    </div>
 );
