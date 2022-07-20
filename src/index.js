@@ -8,6 +8,8 @@ import FirstFunctionalComponent from './first-functional-component';
 import Assignment1 from './assigments/assignment-1';
 import Input from './input';
 import List from './list';
+import User from "./user";
+import Employee from './employess';
 
 ///
 //<div id="main"></div>
@@ -30,5 +32,7 @@ root.render(
       {/* <Assignment1/> */}
       <Input/>
       <List/>
+      <User/>
+      <Employee/>
     </div>
 );
